@@ -6,7 +6,7 @@
 ```shell
 .
 ├── .vscode                          # vs code 配置文件夹
-│   └── settings.json                # vs code [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency) 插件配置文件
+│   └── settings.json                # vs code 插件Project Manager for Java的配置文件
 ├── README.md                        # 本文档
 ├── lib                              # 
 └── src                              # 源代码
