@@ -1,4 +1,8 @@
 package data_structures.tree;
+
+import data_structures.stack.Stack;
+import data_structures.stack.LinkedListStack;
+
 /**
  * BST 二分搜索树
  */
@@ -233,8 +237,21 @@ public class BST<E extends Comparable<E>>{
      * 前序遍历
      */
     public void preOrder(){
-        // pre_order_loop(root);//循环实现
         preOrder(root);
+    }
+
+    /**
+     * 前序遍历 递归写法
+     * 
+     * @param node
+     */
+    private void preOrder(Node node) {
+        if (node == null)
+            return;
+
+        System.out.println(node.e);
+        preOrder(node.left);
+        preOrder(node.right);
     }
 
 
@@ -242,27 +259,21 @@ public class BST<E extends Comparable<E>>{
      * 循环实现前序遍历
      * @param node
      */
-    // private void pre_order_loop(Node node){
-    //     // Stack stack = new ../Stack/LinkedListStack();
-    //     do{
-    //         if(node == null){
-    //             System.out.println("->null");
-    //         }else{
+    public void preOrderNR(){
+        Stack<Node> stack = new LinkedListStack<>();
+        stack.push(root); //将根节点压入栈
+        while(!stack.isEmpty()){ //如果栈是空的则表示已经遍历完成
+            Node cur = stack.pop(); //取出当前栈顶元素,执行遍历操作
+            System.err.println(cur.e); //遍历操作
 
-    //         }
-    //     }while(true);
-    // }
-
-    /**
-     * 前序遍历 递归写法
-     */
-    private void preOrder(Node node){
-        if(node == null)
-            return;
-
-        System.out.println(node.e);
-        preOrder(node.left);
-        preOrder(node.right);
+            // 先压入右子树,再压入左子树 出栈的时候就是先左后右 前序遍历
+            if(cur.right != null){
+                stack.push(cur.right);
+            }
+            if(cur.left != null){
+                stack.push(cur.left);
+            }
+        };
     }
 
     /**
@@ -280,6 +291,7 @@ public class BST<E extends Comparable<E>>{
         System.out.println(node.e);
         inOrder(node.right);
     }
+
 
 
     @Override
