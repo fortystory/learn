@@ -404,6 +404,47 @@ public class BST<E extends Comparable<E>>{
         return node;
     }
 
+    public void remove(E e){
+        root = remove(root,e);
+    }
+
+    private Node remove(Node node,E e){
+        if(node == null){
+            return null;
+        }
+
+        if(e.compareTo(node.e) < 0){
+            node.left = remove(node.left,e);
+            return node;
+        }else if(e.compareTo(node.e) > 0){
+            node.right = remove(node.right,e);
+            return node;
+        }else{ //e.compareTo(node.e) == 0 即需要删除的节点
+            if(node.left == null){
+                Node rightNode = node.right;
+                node.right = null;
+                size--;
+                return rightNode;//父节点链接新子节点的操作在上面 `node.left = remove(node.left,e);`
+            }
+            if(node.right == null){
+                Node leftNode = node.left;
+                node.left = null;
+                size--;
+                return leftNode;//父节点链接新子节点的操作在上面 `node.right = remove(node.right,e);`
+            }
+            //需要删除的节点 同时拥有左右子树
+            //这里去右子树的最小是作为新的节点
+            Node successor = minmum(node.right); //获取右子树的最小值
+            successor.right = removeMin(node.right); //将最小值删除后赋值给新节点的右子树
+            successor.left = node.left; //左子树平移过来
+
+            //清空删除的节点
+            node.left = node.right = null;
+            return successor;
+        }
+
+    }
+
     /**
      * 带换行的层序遍历
      */

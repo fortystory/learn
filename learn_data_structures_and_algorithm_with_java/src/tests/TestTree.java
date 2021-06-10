@@ -13,7 +13,13 @@ public class TestTree {
             b.add(num);
         }
 
-        System.out.println(b);
+        b.inOrder();
+        System.out.println();
+        b.remove(8);
+        b.inOrder();
+        System.out.println();
+        // b.remove(8);
+        // b.inOrder();
         // b.preOrder();
         // System.out.println();
         // b.preOrderNR();
