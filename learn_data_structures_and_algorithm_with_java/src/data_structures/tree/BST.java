@@ -1,6 +1,8 @@
 package data_structures.tree;
 
 import data_structures.stack.Stack;
+import data_structures.queue.LinkedListQueue;
+import data_structures.queue.Queue;
 import data_structures.stack.LinkedListStack;
 
 /**
@@ -292,7 +294,133 @@ public class BST<E extends Comparable<E>>{
         inOrder(node.right);
     }
 
+    /**
+     * 层序遍历
+     */
+    public void levelOrder() {
+        Queue<Node> q = new LinkedListQueue<>();
+        q.enqueue(root);
+        while(!q.isEmpty()){
+            Node cur = q.dequeue();
+            System.out.println(cur.e);
+            if(cur.left != null){
+                q.enqueue(cur.left);
+            }
+            if(cur.right != null){
+                q.enqueue(cur.right);
+            }
+        }
+    }
 
+    /**
+     * 获取最大元素的值
+     * @return
+     */
+    public E maxmum(){
+        if(size == 0){
+            throw new IllegalArgumentException("BST is Empty");
+        }
+        return maxmum(root).e;
+    }
+
+    /**
+     * 递归获取node为根的最大元素
+     * @param node
+     * @return
+     */
+    private Node maxmum(Node node){
+        if(node.right == null){
+            return node;
+        }
+        return maxmum(node.right);
+    }
+
+    /**
+     * 删除最大元素
+     *
+     * @return
+     */
+    public E removeMax(){
+        E ret = maxmum();
+        root = removeMax(root);
+        return ret;
+    }
+
+    private Node removeMax(Node node){
+        if(node.right == null){
+            Node leftNode = node.left;
+            node.left = null;
+            size --;
+            return leftNode;
+        }
+
+        node.right = removeMax(node.right);
+        return node;
+    }
+
+    /**
+     * 获取二分搜索树的最小值
+     * @return
+     */
+    public E minmum(){
+        return minmum(root).e;
+    }
+
+    /**
+     * 获取以node为根的最小值
+     * @param node
+     * @return
+     */
+    private Node minmum(Node node){
+        if(node.left == null){
+            return node;
+        }
+        return minmum(node.left);
+    }
+
+    /**
+     * 删除最小元素
+     *
+     * @return
+     */
+    public E removeMin() {
+        E ret = minmum();
+        root = removeMin(root);
+        return ret;
+    }
+
+    /**
+     * 删除以node为根的最小节点
+     * @return 返回删除节点后的二分搜索树的根
+     */
+    private Node removeMin(Node node){
+        if(node.left == null){
+            Node rightNode = node.right;
+            node.right = null;
+            size--;
+            return rightNode;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
+
+    /**
+     * 带换行的层序遍历
+     */
+    public void levelOrderWithEnter() {
+        Queue<Node> q = new LinkedListQueue<>();
+        q.enqueue(root);
+        while (!q.isEmpty()) {
+            Node cur = q.dequeue();
+            System.out.println(cur.e);
+            if (cur.left != null) {
+                q.enqueue(cur.left);
+            }
+            if (cur.right != null) {
+                q.enqueue(cur.right);
+            }
+        }
+    }
 
     @Override
     public String toString(){

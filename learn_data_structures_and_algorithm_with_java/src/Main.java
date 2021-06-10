@@ -1,22 +1,24 @@
 
 import java.util.Random;
 
+import data_structures.array.Array;
 import data_structures.queue.LinkedListQueue;
 import data_structures.queue.LoopQueue;
 import data_structures.queue.Queue;
 import data_structures.stack.ArrayStack;
+import tools.Student;
 
 public class Main {
     public static void main(String[] args) {
 
-        // Array<Student> arra = new Array<>(6);
-        // arra.addLast(new Student("Alice1",200));
-        // arra.addLast(new Student("Alice2",200));
-        // arra.addLast(new Student("Alice3",200));
-        // arra.addLast(new Student("Alice4",200));
-        // arra.addLast(new Student("Alice5",200));
-        // arra.addLast(new Student("Alice6",200));
-        // System.out.println(arra);
+        Array<Student> arra = new Array<>(6);
+        arra.addLast(new Student("Alice1",200));
+        arra.addLast(new Student("Alice2",200));
+        arra.addLast(new Student("Alice3",200));
+        arra.addLast(new Student("Alice4",200));
+        arra.addLast(new Student("Alice5",200));
+        arra.addLast(new Student("Alice6",200));
+        System.out.println(arra);
         // arra.removeLast();
         // System.out.println(arra);
 
