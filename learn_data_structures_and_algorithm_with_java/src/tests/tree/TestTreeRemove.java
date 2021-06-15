@@ -1,15 +1,16 @@
-package tests;
+package tests.tree;
 import java.util.Random;
 
 import data_structures.array.Array;
 import data_structures.tree.BST;
+import data_structures.tree.BSTBase;
 
 /**
  * 测试二分搜索书的删除功能
  */
 public class TestTreeRemove{
     public static void main(String[] args) throws Exception {
-        BST<Integer> b = new BST<>();
+        BST<Integer> b = new BSTBase<>();
         Random random = new Random();
         int n = 100;
         Array<Integer> nums = new Array<>();

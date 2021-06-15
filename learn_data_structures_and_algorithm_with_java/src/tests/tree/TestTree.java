@@ -1,23 +1,24 @@
-package tests;
-// import data_structures.array.Array;
+package tests.tree;
 import data_structures.tree.BST;
+import data_structures.tree.BSTBase;
 public class TestTree {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
 
-        BST<Integer> b = new BST<>();
+        BST<Integer> b = new BSTBase<>();
 
-        int[] nums = {5,10,8,9,1,0,3,6,8,11,7,4,2};
+        int[] nums = {5,10,8,9,1,0,3,8,11,7,4,2};
 
         for (int num : nums) {
             b.add(num);
         }
 
-        b.inOrder();
-        System.out.println();
-        b.remove(8);
-        b.inOrder();
-        System.out.println();
+        System.out.println(b.maxmum());
+        // b.inOrder();
+        // System.out.println();
+        // b.remove(6);
+        // b.inOrder();
+        // System.out.println();
         // b.remove(8);
         // b.inOrder();
         // b.preOrder();
