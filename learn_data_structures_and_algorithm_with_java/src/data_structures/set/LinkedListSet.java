@@ -11,8 +11,8 @@ public class LinkedListSet<E> implements Set<E> {
 
     @Override
     public void add(E e){
-        if(!list.contains(e)){
-            list.addFirst(e);
+        if(!list.contains(e)){ //这一步查找是O(n)
+            list.addFirst(e); //这一步添加是O(1),整体是O(n)
         }
     }
 

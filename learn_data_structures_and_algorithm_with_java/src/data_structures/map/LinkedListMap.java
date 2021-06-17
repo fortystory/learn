@@ -67,13 +67,12 @@ public class LinkedListMap<K, V> implements Map<K, V> {
     }
 
     @Override
-    public void add(K key, V value){
+    public void add(K key, V value){ //因为需要先确定key是否存在 所以添加这个操作也是O(n)
         Node node = getNode(key);
         if(node == null){//如果不存在 添加到链表头,无论链表是否为空,操作都是相同的
             dummyHead.next = new Node(key,value,dummyHead.next);
             size++;
-        }
-        else{
+        }else{
             node.value = value;//如果存在 更新value值
         }
     }

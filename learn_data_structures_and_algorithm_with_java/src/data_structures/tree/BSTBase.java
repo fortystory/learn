@@ -77,6 +77,7 @@ public class BSTBase<E extends Comparable<E>> implements BST<E>{
             size++;
             return new Node(e);
         }
+
         if (e.compareTo(node.e) < 0) {
             node.left = add(node.left, e);
         } else if (e.compareTo(node.e) > 0) {

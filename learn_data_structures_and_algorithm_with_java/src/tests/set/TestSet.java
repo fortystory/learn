@@ -6,6 +6,7 @@ import javax.security.auth.x500.X500Principal;
 
 import data_structures.set.BSTSet;
 import data_structures.set.LinkedListSet;
+import data_structures.set.MapSet;
 import tools.FileOperation;
 
 public class TestSet {
@@ -15,7 +16,8 @@ public class TestSet {
         ArrayList<String> words = new ArrayList<>();
         if (FileOperation.readFile("src/tools/books/pride-and-prejudice.txt", words)) {
             System.out.println("Total Words: " + words.size());
-            BSTSet<String> set = new BSTSet<>();
+            MapSet<String> set = new MapSet<>();
+            // BSTSet<String> set = new BSTSet<>();
             // LinkedListSet<String> set = new LinkedListSet<>();
             for (String word : words) {
                     set.add(word);
