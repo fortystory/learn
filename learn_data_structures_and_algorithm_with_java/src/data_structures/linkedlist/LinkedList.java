@@ -1,4 +1,5 @@
 package data_structures.linkedlist;
+
 public class LinkedList<E> {
 
     private class Node{
@@ -150,6 +151,23 @@ public class LinkedList<E> {
 
     public E removeLast(){
         return remove(size - 1);
+    }
+
+    public void removeElement(E e){
+        Node prev = dummyHead;
+        while(prev.next !=null){
+            if(prev.next.e.equals(e)){
+                break;
+            }
+            prev = prev.next;
+        }
+
+        if(prev != null){
+            Node del = prev.next;
+            prev.next = del.next;
+            del.next = null;
+            size--;
+        }
     }
 
     @Override
