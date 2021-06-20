@@ -17,12 +17,24 @@ public class Array<E> {
         size = 0;
     }
 
-
     /**
      * 无参数的构造方法,默认长度为10
      */
     public Array(){
         this(10);//this() 代表本类的构造方法
+    }
+
+    /**
+     * 使用数组创建数组
+     * @param arr
+     */
+    @SuppressWarnings("unchecked")
+    public Array(E[] arr) {
+        data = (E[]) new Object[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            data[i] = arr[i];
+        }
+        size = arr.length;
     }
 
     /**
@@ -196,6 +208,16 @@ public class Array<E> {
             return true;
         }
         return false;
+    }
+
+    public void swap(int i, int j){
+        if(i < 0 || j < 0 || i >= size || j >= size){
+            throw new IllegalArgumentException("index is illegal.");
+        }
+
+        E t = data[i];
+        data[i] = data[j];
+        data[j] = t;
     }
 
 
