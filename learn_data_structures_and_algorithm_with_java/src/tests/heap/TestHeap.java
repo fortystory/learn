@@ -68,7 +68,7 @@ public class TestHeap{
 
         }else{
             System.out.println("not heapify:");
-            maxHeap = new MaxHeap<>();
+            maxHeap = new MaxHeap<>(testData.length);
             for (Integer num : testData) {
                 maxHeap.add(num);
             }
