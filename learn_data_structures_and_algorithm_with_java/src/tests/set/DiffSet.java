@@ -16,10 +16,13 @@ public class DiffSet {
         LinkedListSet<String> linkedListSet = new LinkedListSet<>();
         // String filename = "src/tools/books/pride-and-prejudice.txt";
         String filename = "src/tools/books/a-tale-of-two-cities.txt";
-
-        System.out.println("bstSet use:" + testSet(bstSet,filename) + "s");
+        System.out.println(System.getProperty("java.version"));
+        System.out.println("File: "+filename);
         System.out.println();
+
         System.out.println("mapSet use:" + testSet(mapSet,filename) + "s");
+        System.out.println();
+        System.out.println("bstSet use:" + testSet(bstSet,filename) + "s");
         System.out.println();
         System.out.println("linkedListSet use:" + testSet(linkedListSet,filename) + "s");
     }
@@ -27,7 +30,6 @@ public class DiffSet {
     private static double testSet(Set<String> set, String filename){
         long starTime = System.nanoTime();
 
-        System.out.println("File: "+filename);
 
         ArrayList<String> words = new ArrayList<>();
         if (FileOperation.readFile(filename, words)) {
