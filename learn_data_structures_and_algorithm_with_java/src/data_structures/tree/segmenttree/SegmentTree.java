@@ -1,5 +1,8 @@
-package data_structures.tree;
+package data_structures.tree.segmenttree;
 
+// todo 如何懒惰更新
+// todo 多维线段树
+// todo 动态线段树
 public class SegmentTree<E> {
     private E[] data;
     private E[] tree;
@@ -126,6 +129,7 @@ public class SegmentTree<E> {
             set(leftTreeIndex, l, mid, index, e);
         }
 
+        //后续遍历
         tree[treeIndex] = merger.merge(tree[leftTreeIndex],tree[rightTreeIndex]);
     }
 

@@ -1,6 +1,6 @@
 package tests.tree;
-import data_structures.tree.BST;
-import data_structures.tree.BSTBase;
+import data_structures.tree.bst.BST;
+import data_structures.tree.bst.BSTBase;
 public class TestTree {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");

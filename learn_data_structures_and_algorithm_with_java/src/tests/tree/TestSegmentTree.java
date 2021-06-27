@@ -1,7 +1,6 @@
 package tests.tree;
 
-import data_structures.tree.SegmentTree;
-// import data_structures.tree.Merger;
+import data_structures.tree.segmenttree.SegmentTree;
 
 public class TestSegmentTree {
     public static void main(String[] args) throws Exception {

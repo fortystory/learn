@@ -1,4 +1,4 @@
-package data_structures.tree;
+package data_structures.tree.bst;
 
 /**
  * 栈接口

@@ -2,8 +2,8 @@ package tests.tree;
 import java.util.Random;
 
 import data_structures.array.Array;
-import data_structures.tree.BST;
-import data_structures.tree.BSTBase;
+import data_structures.tree.bst.BST;
+import data_structures.tree.bst.BSTBase;
 
 /**
  * 测试二分搜索书的删除功能

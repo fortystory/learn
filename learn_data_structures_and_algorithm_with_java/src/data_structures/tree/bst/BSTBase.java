@@ -1,4 +1,4 @@
-package data_structures.tree;
+package data_structures.tree.bst;
 
 import data_structures.stack.Stack;
 import data_structures.queue.LinkedListQueue;

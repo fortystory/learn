@@ -1,7 +1,7 @@
 package tests.tree;
 
-import data_structures.tree.BST;
-import data_structures.tree.BSTExt;
+import data_structures.tree.bst.BST;
+import data_structures.tree.bst.BSTExt;
 
 public class TestBSTExt {
     public static void main(String[] args) throws Exception {
