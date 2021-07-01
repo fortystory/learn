@@ -4,6 +4,7 @@ import data_structures.set.Set;
 
 import java.util.ArrayList;
 
+import data_structures.set.AVLSet;
 import data_structures.set.BSTSet;
 import data_structures.set.LinkedListSet;
 import data_structures.set.MapSet;
@@ -14,17 +15,20 @@ public class DiffSet {
         BSTSet<String> bstSet = new BSTSet<>();
         MapSet<String> mapSet = new MapSet<>();
         LinkedListSet<String> linkedListSet = new LinkedListSet<>();
+        AVLSet<String> avlSet = new AVLSet<>();
         // String filename = "src/tools/books/pride-and-prejudice.txt";
         String filename = "src/tools/books/a-tale-of-two-cities.txt";
         System.out.println(System.getProperty("java.version"));
         System.out.println("File: "+filename);
         System.out.println();
 
-        System.out.println("mapSet use:" + testSet(mapSet,filename) + "s");
-        System.out.println();
         System.out.println("bstSet use:" + testSet(bstSet,filename) + "s");
         System.out.println();
-        System.out.println("linkedListSet use:" + testSet(linkedListSet,filename) + "s");
+        System.out.println("avlSet use:" + testSet(avlSet,filename) + "s");
+        System.out.println();
+        System.out.println("mapSet use:" + testSet(mapSet,filename) + "s");
+        System.out.println();
+        //System.out.println("linkedListSet use:" + testSet(linkedListSet,filename) + "s");
     }
 
     private static double testSet(Set<String> set, String filename){

@@ -2,8 +2,6 @@ package tests.tree;
 
 import java.util.ArrayList;
 
-import javax.management.RuntimeErrorException;
-
 import data_structures.tree.AVL.AVLTree;
 import tools.FileOperation;
 

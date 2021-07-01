@@ -2,11 +2,6 @@ package data_structures.tree.AVL;
 
 import java.util.ArrayList;
 
-import javax.swing.plaf.metal.MetalBorders.InternalFrameBorder;
-import javax.swing.plaf.synth.Region;
-
-import org.w3c.dom.Node;
-
 /**
  * 使用带有K,V(可以实现全部的set接口)的BST进行优化得到AVL
  */
