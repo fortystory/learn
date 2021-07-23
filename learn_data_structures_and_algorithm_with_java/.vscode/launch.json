@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TimeMap",
+            "request": "launch",
+            "mainClass": "tests.temp.TimeMap",
+            "projectName": "learn_data_structures_and_algorithm_with_java_81eb4673"
+        },
+        {
+            "type": "java",
             "name": "Launch Test",
             "request": "launch",
             "mainClass": "tests.linkedlist.Test",
