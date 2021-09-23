@@ -1,1 +1,4 @@
 php/
+rust/**/target/
+rust/**/Cargo.lock
+rust/rustlings/
