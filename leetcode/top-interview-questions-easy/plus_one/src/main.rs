@@ -48,10 +48,10 @@ struct Solution;
 
 impl Solution {
     pub fn plus_one(digits: Vec<i32>) -> Vec<i32> {
-        let mut v = digits.clone();
+        let mut v = digits;
         let mut last = v.len() - 1;
         loop {
-            println!("{}",last);
+            // println!("{}",last);
             v[last] = v[last] + 1;
             if v[last] > 9 {
                 v[last] = v[last] - 10;
