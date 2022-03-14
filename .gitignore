@@ -36,3 +36,11 @@ jspm_packages/
 *.rar
 *.tar.gz
 *.iml
+
+
+composer.phar
+composer.lock
+/vendor/
+**/composer.phar
+**/vendor/
+**/composer.lock
