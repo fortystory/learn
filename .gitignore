@@ -27,3 +27,12 @@ jspm_packages/
 .svn/
 .vscode/*
 **/.vscode/*
+
+*.class
+**/*.class
+*.jar
+*.war
+*.zip
+*.rar
+*.tar.gz
+*.iml
