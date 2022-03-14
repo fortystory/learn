@@ -1,7 +1,0 @@
-php/
-rust/**/target/
-rust/**/Cargo.lock
-rust/rustlings/
-**/*.rs.bk
-**/rust/**/target/
-**/rust/**/Cargo.lock
