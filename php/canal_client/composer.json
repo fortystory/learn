@@ -1,6 +1,0 @@
-{
-    "require": {
-        "xingwenge/canal_php": "^1.0",
-        "elasticsearch/elasticsearch": "^7.16"
-    }
-}
