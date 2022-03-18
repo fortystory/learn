@@ -13,6 +13,11 @@ struct Solution;
 
 
 impl Solution {
+    /// 执行用时：0 ms, 在所有 Rust 提交中击败了100.00% 的用户
+    /// 
+    /// 内存消耗：2.6 MB, 在所有 Rust 提交中击败了5.17% 的用户
+    /// 
+    /// 通过测试用例：57 / 57
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut map:HashMap<i32,usize> = HashMap::new();
         for i in 0..nums.len() {
